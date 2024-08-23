@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+from .fetch_data import fetch_manchester_msoas
 
 
 class OriginDestination:
@@ -23,6 +23,8 @@ class ODSampler(OriginDestination):
         day_type (str): either 'weekday' or 'weekend'
         '''
         self.message = 'I am a sampler'
+        self.model_data = fetch_manchester_msoas()
+        print('Fetched model data')
         
         
         
